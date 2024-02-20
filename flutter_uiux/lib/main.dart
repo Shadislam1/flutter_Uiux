@@ -15,10 +15,10 @@ class MyApp extends StatelessWidget {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.purple[200],
+        //backgroundColor: Colors.purple[200],
        //in this section  appbar menu we add icon using leading button
-       //more icon we use action[] the in action property
-        appBar: AppBar(
+       //more icon we use action[] the in action
+      /*  appBar: AppBar(
           backgroundColor: Colors.deepPurple,
           title: Text('My App Bar'),
           elevation: 0,
@@ -30,23 +30,27 @@ class MyApp extends StatelessWidget {
                ),
           ],
         ),
-        body: Center(
-          child: Container(
-           
-            height: 300,
-            width: 300,
-            decoration: BoxDecoration(
-             color: Colors.deepPurple,
-             borderRadius: BorderRadius.circular(20.0),
+        */
+        //list veiw is scrollable and much batter
+        body: ListView(
+          children: <Widget>[
+            Container(
+              color: Colors.deepPurple[200],
+              height: 350,
+             
             ),
-            padding: EdgeInsets.all(25.0),
-            child: Icon(
-              Icons.favorite,
-              color: Colors.white,
-              size: 64,
-            ),
-              
+
+             Container(
+               color: Colors.deepPurple,
+               height: 350,
+             
+             ),
+              Container(
+               color: Colors.deepPurple[300],
+               height: 350,
+               
               ),
+          ]
           ),
           
         ),
