@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_uiux/pages/first_page.dart';
 
 void main() {
   runApp( MyApp());
@@ -8,7 +9,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
+ const MyApp({super.key});
 
   //function and method 
   void userTab(){
@@ -19,24 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-       
-        
-      body: Center(
-        child: GestureDetector(
-          onTap:userTab,
-          child: Container(
-           
-            
-          width: 200,
-          height: 200,
-          color: Colors.purple,
-          child: Center(child: Text("Tap me")),
-            ),
-        ),
-      ),
-      
-        ),
+      home: FirstPage(),
       );
     
   }
