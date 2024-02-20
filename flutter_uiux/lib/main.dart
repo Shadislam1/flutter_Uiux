@@ -10,6 +10,11 @@ void main() {
 class MyApp extends StatelessWidget {
   MyApp({super.key});
 
+
+
+
+List names = ['shad', 'pro', 'noob'];
+
   @override
   Widget build(BuildContext context) {
     return  MaterialApp(
@@ -32,26 +37,38 @@ class MyApp extends StatelessWidget {
         ),
         */
         //list veiw is scrollable and much batter
-        body: ListView(
+        body:GridView.builder(
+          itemCount: 64,
+          gridDelegate:
+          //how many rows
+          SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4),
+           itemBuilder: (context, index)=>Container(
+            color: Colors.purple,
+            margin: EdgeInsets.all(2),
+           )),
+
+
+        /* ListView(
+          scrollDirection: Axis.horizontal,
           children: <Widget>[
             Container(
               color: Colors.deepPurple[200],
-              height: 350,
+              width: 350,
              
             ),
 
              Container(
                color: Colors.deepPurple,
-               height: 350,
+               width: 350,
              
              ),
               Container(
                color: Colors.deepPurple[300],
-               height: 350,
+               width: 350,
                
               ),
           ]
-          ),
+          ),*/
           
         ),
       );
